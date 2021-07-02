@@ -26,8 +26,6 @@ while True:
         print( 'there are 3 elements')
         a,b,c = pointsList
         pointsList.clear()
-        print('valor de a,b,c')
-        print(a,b,c)
         getAngle(a,b,c)
 
 
