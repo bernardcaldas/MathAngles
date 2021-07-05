@@ -1,7 +1,7 @@
 import cv2
 import math
 
-image = cv2.imread('90-degrees.png')
+image = cv2.imread('angles.png')
 pointsList = []
 
 def mouseClick(event,x,y,flags,params):
@@ -15,10 +15,12 @@ def getAngle(a,b,c):
 
     if ang < 0:
         ang + 360
+        
         print(f'the value of the angle is {ang}, + 360 in this case')
     else:
         print(f'the value of the angle is {ang}.')    
     #return ang + 360 if ang < 0 else ang
+    cv2.putText(image,str(ang),(b[0]+10,b[1]+10), cv2.FONT_HERSHEY_COMPLEX_SMALL,1,(0,0,0),1)
 
 while True:
 
@@ -27,8 +29,10 @@ while True:
         a,b,c = pointsList
         cv2.line(image, a,b,(0,0,0),1,cv2.LINE_AA )
         cv2.line(image, b,c,(0,0,0),1,cv2.LINE_AA )
+        
         pointsList.clear()
         getAngle(a,b,c)
+        
 
 
     cv2.imshow('imagem', image)
