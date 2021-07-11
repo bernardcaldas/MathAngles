@@ -20,7 +20,7 @@ def getAngle(a,b,c):
     else:
         print(f'the value of the angle is {ang}.')    
     #return ang + 360 if ang < 0 else ang
-    cv2.putText(image,str(("{:.2f}".format(ang))),(b[0]+0,b[1]+20), cv2.FONT_HERSHEY_COMPLEX_SMALL,1,(0,0,0),1)
+    cv2.putText(image,str(("{:.2f}".format(ang))),(b[0]+10,b[1]+20), cv2.FONT_HERSHEY_COMPLEX_SMALL,1,(0,0,0),1)
 
 while True:
 
